@@ -1,0 +1,8 @@
+./tsconfig.json
+./package-lock.json
+.vscode
+src/
+scripts/
+config/
+index.html
+index-no-deps.html
