@@ -6,3 +6,6 @@ scripts/
 config/
 index.html
 index-no-deps.html
+tsconfig.json
+.gitignore
+.gitattributes

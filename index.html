@@ -2,34 +2,20 @@
 <html>
 <head>
   <script type="text/javascript">
-    window.documentRegisterElementScriptPath = './node_modules/document-register-element/build/document-register-element.js';
+    window.documentRegisterElementScriptPath 
+      = './node_modules/document-register-element/build/document-register-element.js';
   </script>
-  <script src="dist/thenja-login-form.bundle.umd.js"></script>
+  <script src="dist/vue-wc-seed.bundle.umd.js"></script>
 </head>
 <body>
   <div id="app">This text is outside the web component</div>
-  <button id="btnLoadData">Load data</button>
   <div>
-    <thenja-login-form title="Please Login!" id="form-one"></thenja-login-form>
+    <vue-wc-seed welcome-message="Welcome to Vue WC Seed!" id="myComp"></vue-wc-seed>
   </div>
   <script type="text/javascript">
-    var formOne = document.getElementById('form-one');
-
-    // you could also set the attribute / property like so
-    // formOne.title = "A different title";
-
-    // example of how to listen to data being passed out of our custom element
-    formOne.addEventListener('thenja-login-form-submit', function(ev) {
-      console.log('thenja-login-form-submit fired...');
-      console.log(ev.detail[0]);
-    });
-
-    // example of how to pass data to the custom element. This is another
-    // way of passing data instead of attribues / properties
-    document.getElementById('btnLoadData')
-    .addEventListener('click', function(){
-      formOne.passData({email: 'email-passed-in@email.com'});
-    });
+    var myComp = document.getElementById('myComp');
+    // you could pass data to the component
+    myComp.passData({email: 'email-passed-in@email.com'});
   </script>
 </body>
 </html>

@@ -9,11 +9,10 @@ import { uglify } from 'rollup-plugin-uglify';
 import rollupPostcss from 'rollup-plugin-postcss';
 import postcssUrl from 'postcss-url';
 import ignoreImport from 'rollup-plugin-ignore-import';
-const path = require('path');
 const encodeUrlHandler = require('./encode-url-handler');
 const isProd = (process.env.NODE_ENV === 'prod') ? true : false;
 
-const componentName = 'thenja-login-form';
+const COMPONENT_NAME = 'vue-wc-seed';
 
 const postCssPlugins = [
   postcssUrl({
@@ -65,7 +64,7 @@ const vuePluginOptions = {
 let devBuild = {
   input: 'src/index.ts',
   output: {
-    file: 'dist/' + componentName + '.bundle.umd.js',
+    file: 'dist/' + COMPONENT_NAME + '.bundle.umd.js',
     format: 'umd',
     // sourcemap: true // does not seem to work well with .vue files
   },
@@ -90,7 +89,7 @@ let devBuild = {
 let prodBuildAll = {
   input: 'src/index.ts',
   output: {
-    file: 'dist/' + componentName + '.bundle.umd.min.js',
+    file: 'dist/' + COMPONENT_NAME + '.bundle.umd.min.js',
     format: 'umd'
   },
   plugins: [
@@ -116,7 +115,7 @@ let prodBuildAll = {
 let prodBuildNoDeps = {
   input: 'src/index.ts',
   output: {
-    file: 'dist/' + componentName + '.umd.min.js',
+    file: 'dist/' + COMPONENT_NAME + '.umd.min.js',
     format: 'umd',
     globals: outputGlobals
   },
@@ -143,7 +142,7 @@ let prodBuildNoDeps = {
 let prodBuildEsm = {
   input: 'src/index.ts',
   output: {
-    file: 'dist/' + componentName + '.esm.js',
+    file: 'dist/' + COMPONENT_NAME + '.esm.js',
     format: 'esm',
     globals: outputGlobals
   },

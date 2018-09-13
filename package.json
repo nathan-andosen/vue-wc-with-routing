@@ -9,7 +9,8 @@
     "dev": "grunt dev",
     "build-dev": "env NODE_ENV=dev rollup -c ./config/rollup.config.js",
     "build": "bash ./scripts/build.sh",
-    "compile-scss": "node ./scripts/compile-scss.js"
+    "compile-scss": "node ./scripts/compile-scss.js",
+    "init": "bash ./scripts/init.sh"
   },
   "author": "",
   "license": "MIT",
@@ -38,7 +39,8 @@
     "rollup-plugin-uglify": "4.0.0",
     "rollup-plugin-vue": "4.3.2",
     "typescript": "3.0.3",
-    "vue-template-compiler": "2.5.16"
+    "vue-template-compiler": "2.5.16",
+    "yargs": "12.0.2"
   },
   "dependencies": {
     "document-register-element": "1.10.1",

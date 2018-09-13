@@ -2,10 +2,12 @@ const path = require('path');
 const mime = require('mime');
 const fs = require('fs-extra');
 const sass = require('node-sass');
+
+const COMPONENT_NAME = 'vue-wc-seed';
 const rootDir = path.join(__dirname, '..');
 const scssFilePath = path.join(rootDir, 'src', 'assets', 'scss', 'index.scss');
-const scssOutputPath = path.join(rootDir, 'dist', 'thenja-login-form.scss');
-const cssOutputPath = path.join(rootDir, 'dist', 'thenja-login-form.css');
+const scssOutputPath = path.join(rootDir, 'dist', COMPONENT_NAME + '.scss');
+const cssOutputPath = path.join(rootDir, 'dist', COMPONENT_NAME + '.css');
 const ignoreImports = {
   "~bootstrap/scss/bootstrap.scss": true
 };
