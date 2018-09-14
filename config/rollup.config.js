@@ -12,7 +12,7 @@ import ignoreImport from 'rollup-plugin-ignore-import';
 const encodeUrlHandler = require('./encode-url-handler');
 const isProd = (process.env.NODE_ENV === 'prod') ? true : false;
 
-const COMPONENT_NAME = 'vue-wc-seed';
+const COMPONENT_NAME = 'vue-wc-with-routing';
 
 const postCssPlugins = [
   postcssUrl({

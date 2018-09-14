@@ -5,17 +5,17 @@
     window.documentRegisterElementScriptPath 
       = './node_modules/document-register-element/build/document-register-element.js';
   </script>
-  <script src="dist/vue-wc-seed.bundle.umd.js"></script>
+  <script src="dist/vue-wc-with-routing.bundle.umd.js"></script>
 </head>
 <body>
   <div id="app">This text is outside the web component</div>
   <div>
-    <vue-wc-seed welcome-message="Welcome to Vue WC Seed!" id="myComp"></vue-wc-seed>
+    <vue-wc-with-routing welcome-message="Welcome to Vue WC Seed!" id="myComp"></vue-wc-with-routing>
   </div>
   <script type="text/javascript">
     var myComp = document.getElementById('myComp');
     // you could pass data to the component
-    myComp.passData({email: 'email-passed-in@email.com'});
+    // myComp.passData({email: 'email-passed-in@email.com'});
   </script>
 </body>
 </html>

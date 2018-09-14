@@ -1,9 +1,9 @@
 {
-  "name": "vue-wc-seed",
+  "name": "vue-wc-with-routing",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/vue-wc-seed.umd.min.js",
-  "module": "dist/vue-wc-seed.esm.js",
+  "main": "dist/vue-wc-with-routing.umd.min.js",
+  "module": "dist/vue-wc-with-routing.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "grunt dev",
@@ -46,6 +46,7 @@
     "document-register-element": "1.10.1",
     "vue": "2.5.16",
     "vue-custom-element": "3.2.1",
-    "vue-property-decorator": "7.0.0"
+    "vue-property-decorator": "7.0.0",
+    "vue-router": "3.0.1"
   }
 }

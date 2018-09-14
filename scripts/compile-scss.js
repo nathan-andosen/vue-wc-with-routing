@@ -3,7 +3,7 @@ const mime = require('mime');
 const fs = require('fs-extra');
 const sass = require('node-sass');
 
-const COMPONENT_NAME = 'vue-wc-seed';
+const COMPONENT_NAME = 'vue-wc-with-routing';
 const rootDir = path.join(__dirname, '..');
 const scssFilePath = path.join(rootDir, 'src', 'assets', 'scss', 'index.scss');
 const scssOutputPath = path.join(rootDir, 'dist', COMPONENT_NAME + '.scss');

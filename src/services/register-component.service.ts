@@ -19,8 +19,14 @@ export class RegisterComponentService {
   register(component: any, name: string, cb?: (element: Function) => void) {
     this.loadPolyfill(() => {
       let element: any;
-      const comp = new component['components'][name]();
-      element = Vue.customElement(name, comp.$options);
+      // const comp = new component['components'][name]();
+      // comp.$options.router = component.router;
+      element = Vue.customElement(name, component, <any>{
+        beforeCreateVueInstance: function(RootComponentDefinition) {
+          // RootComponentDefinition.router = component.router;
+          return RootComponentDefinition;
+        }
+      });
       if(cb) cb(element);
     });
   }

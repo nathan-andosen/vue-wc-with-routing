@@ -7,13 +7,13 @@
     window.documentRegisterElementScriptPath 
       = './node_modules/document-register-element/build/document-register-element.js';
   </script>
-  <link rel="stylesheet" href="dist/vue-wc-seed.css"></link>
-  <script src="dist/vue-wc-seed.umd.min.js"></script>
+  <link rel="stylesheet" href="dist/vue-wc-with-routing.css"></link>
+  <script src="dist/vue-wc-with-routing.umd.min.js"></script>
 </head>
 <body>
   <div id="app">This text is outside the web component</div>
   <div>
-    <vue-wc-seed welcome-message="Welcome to Vue WC Seed!" id="myComp"></vue-wc-seed>
+    <vue-wc-with-routing welcome-message="Welcome to Vue WC Seed!" id="myComp"></vue-wc-with-routing>
   </div>
   <script type="text/javascript">
     var myComp = document.getElementById('myComp');

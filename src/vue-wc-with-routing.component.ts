@@ -1,12 +1,12 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 // the name of the component, this is also the name of the custom element
-export const COMPONENT_NAME = 'vue-wc-seed';
+export const COMPONENT_NAME = 'vue-wc-with-routing';
 
 @Component({
   name: COMPONENT_NAME
 })
-export default class VueWcSeedComponent extends Vue {
+export default class VueWcWithRountingComponent extends Vue {
   @Prop({default: 'Welcome!'}) welcomeMessage!: string;
 
   /**
